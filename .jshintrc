@@ -1,0 +1,28 @@
+{
+	"indent" : 4, //四个空格
+	"newcap" : true, //new 之后的需要首字母大写
+	"undef": true, //如使用未定义的变量会报错
+	"unused": true, //如果变量定义但未使用会报错
+	"curly" : true, //语句块必须使用大括号包裹
+	"eqeqeq" : true, //使用恒等(===)判断
+	"immed" : true, //调用立即执行的函数必须使用括号包裹
+	"noarg" : true,//禁止使用arguments.caller与arguments.callee
+	"noempty" : true, //不允许代码中出现空的语句块（"{}"）.
+	"maxparams" : 3, //每个函数形参数量的上限为3个
+	"maxdepth" : 5, //每个函数中代码块嵌套层级的上限为5层
+	"maxstatements" : 15, //每个函数中语句数量的上限为15
+	"maxlen" : 80, //每行的最大字符长度80
+	"camelcase": true, //变量名必须使用驼峰风格（如"loginStatus"）或UPPER_CASE风格（如"LOGIN_STATUS"）
+	"es3" : true, //你的代码需要遵守ECMAScript 3规范
+
+	"jquery" : true, //全局有jquery
+	"browser" : true, //Web Browser (window, document, etc
+	"maxerr" : 10,
+	// Custom Globals
+    "globals": {
+        // additional predefined global variables
+        "_": true,
+        "require" : true,
+        "define" : true
+    }
+}
