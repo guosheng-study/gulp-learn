@@ -3,6 +3,8 @@ var path = require('path');
 var watch = require('gulp-watch');
 var livereload = require('gulp-livereload');
 var gulpSequence = require('gulp-sequence');
+var plumber = require('gulp-plumber');
+
 //js
 var webpack = require('gulp-webpack');
 var jshint = require('gulp-jshint');
@@ -24,7 +26,8 @@ gulp.task('webpack', function() {
     gulp.src('js/src/**/main.js')
         .pipe(webpack(require('./webpack.config.js')))
         .pipe(gulp.dest('./'))
-        .pipe(livereload());
+        .pipe(livereload())
+        .pipe(plumber());
 });
 
 gulp.task('less', function() {
@@ -38,15 +41,16 @@ gulp.task('less', function() {
 });
 
 gulp.task('lint', function() {
-    return gulp.src('js/src/**/*.js')
+    gulp.src('js/src/**/*.js')
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('default'))
-        .pipe(livereload());
+        .pipe(livereload())
+        .pipe(plumber());
 });
 
 gulp.task('w', function() {
     livereload.listen();
-    gulp.watch('js/src/**/*.js', ['webpack', 'lint']);
+    gulp.watch('js/src/**/*.js', ['webpack']);
     gulp.watch('style/**/*.less', ['less']);
 });
 

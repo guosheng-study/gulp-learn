@@ -1,18 +1,33 @@
 {
-  "name": "gulp-learn",
-  "version": "1.0.0",
-  "description": "gulp",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "ok"
-  },
-  "keywords": [
-    "gulp"
-  ],
-  "author": "guosheng",
-  "license": "ISC"
+    "name": "gulp-learn",
+    "version": "1.0.0",
+    "description": "gulp",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kyo4311/gulp-learn.git"
+    },
+    "keywords": [
+        "gulp"
+    ],
+    "author": "guosheng",
+    "license": "ISC",
+    "devDependencies": {
+        "glob": "^5.0.14",
+        "gulp": "^3.8.11",
+        "gulp-jshint": "^1.9.4",
+        "gulp-uglify": "^1.1.0",
+        "gulp-watch": "^4.2.0",
+        "gulp-less": "^3.0.3",
+        "gulp-livereload": "^3.8.0",
+        "gulp-minify-css": "^1.2.0",
+        "gulp-rev": "^5.1.0",
+        "gulp-sequence": "^0.4.0",
+        "gulp-webpack": "^1.5.0",
+        "gulp-plumber": "1.0.1",
+        "less-plugin-autoprefix": "^1.4.2"
+    }
 }

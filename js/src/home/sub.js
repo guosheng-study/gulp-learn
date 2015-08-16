@@ -1,4 +1,3 @@
-define(function(){
-
-	return 999;
+define(function() {
+	return 555;
 });
